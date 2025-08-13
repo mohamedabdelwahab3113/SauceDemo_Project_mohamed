@@ -3,43 +3,41 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
          http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>com.demoblaze</groupId>
-  <artifactId>demoblaze-automation</artifactId>
-  <version>1.0-SNAPSHOT</version>
+  <modelVersion>4.0.0</modelVersion> <!-- // Maven POM model version -->
+  <groupId>com.demoblaze</groupId>   <!-- // Project group ID -->
+  <artifactId>demoblaze-automation</artifactId> <!-- // Project name -->
+  <version>1.0-SNAPSHOT</version>    <!-- // Version -->
 
   <properties>
-    <maven.compiler.source>1.8</maven.compiler.source>
-    <maven.compiler.target>1.8</maven.compiler.target>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>1.8</maven.compiler.source>   <!-- // Java version -->
+    <maven.compiler.target>1.8</maven.compiler.target>   <!-- // Java version -->
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding> <!-- // Encoding -->
   </properties>
 
   <dependencies>
-    <!-- Selenium WebDriver -->
-    <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+
+    <!-- // Selenium WebDriver -->
     <dependency>
       <groupId>org.seleniumhq.selenium</groupId>
       <artifactId>selenium-java</artifactId>
       <version>4.27.0</version>
     </dependency>
 
-    <!-- Cucumber Java -->
-    <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->
+    <!-- // Cucumber Java -->
     <dependency>
       <groupId>io.cucumber</groupId>
       <artifactId>cucumber-java</artifactId>
       <version>7.15.0</version>
     </dependency>
 
-    <!-- Cucumber TestNG -->
-    <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-testng -->
+    <!-- // Cucumber + TestNG -->
     <dependency>
       <groupId>io.cucumber</groupId>
       <artifactId>cucumber-testng</artifactId>
       <version>7.15.0</version>
     </dependency>
 
-    <!-- TestNG -->
+    <!-- // TestNG framework -->
     <dependency>
       <groupId>org.testng</groupId>
       <artifactId>testng</artifactId>
@@ -47,47 +45,51 @@
       <scope>test</scope>
     </dependency>
 
-    <!-- WebDriverManager -->
+    <!-- // WebDriver Manager -->
     <dependency>
       <groupId>io.github.bonigarcia</groupId>
       <artifactId>webdrivermanager</artifactId>
       <version>5.4.1</version>
     </dependency>
 
-    <!-- Allure for Cucumber & TestNG -->
-    <!-- https://mvnrepository.com/artifact/io.qameta.allure/allure-cucumber-jvm -->
+    <!-- // Allure Reports for Cucumber -->
     <dependency>
       <groupId>io.qameta.allure</groupId>
       <artifactId>allure-cucumber-jvm</artifactId>
       <version>2.20.1</version>
     </dependency>
-    <!-- https://mvnrepository.com/artifact/io.qameta.allure/allure-testng -->
+
+    <!-- // Allure Reports for TestNG -->
     <dependency>
       <groupId>io.qameta.allure</groupId>
       <artifactId>allure-testng</artifactId>
       <version>2.29.1</version>
     </dependency>
 
-    <!-- Extent Reports -->
+    <!-- // Extent Reports -->
     <dependency>
       <groupId>com.aventstack</groupId>
       <artifactId>extentreports</artifactId>
       <version>5.0.9</version>
     </dependency>
+
   </dependencies>
 
   <build>
     <plugins>
+
+      <!-- // Runs test classes matching *Runner*.java -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-surefire-plugin</artifactId>
         <version>3.1.2</version>
         <configuration>
           <includes>
-            <include>**/*Runner*.java</include>
+            <include>**/*Runner*.java</include> <!-- // Test runner classes -->
           </includes>
         </configuration>
       </plugin>
+
     </plugins>
   </build>
 

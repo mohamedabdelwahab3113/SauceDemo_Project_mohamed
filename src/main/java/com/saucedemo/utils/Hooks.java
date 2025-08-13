@@ -1,4 +1,4 @@
-package hooks.utils;
+package com.saucedemo.utils;
 // Package name - defines where this class is located in the project folder structure
 
 import io.cucumber.java.After;

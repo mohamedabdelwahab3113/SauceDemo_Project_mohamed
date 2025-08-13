@@ -1,4 +1,5 @@
 Feature: Purchase flow on SauceDemo
+  // Tests different scenarios in the purchase flow
 
   Scenario: Login successfully
     Given user is on the login page
